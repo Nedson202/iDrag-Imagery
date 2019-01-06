@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p className="page-title">The Draconian Imagery</p>
+        <p className="page-title">The iDrag Imagery</p>
         {this.renderImage()}
       </div>
     );
