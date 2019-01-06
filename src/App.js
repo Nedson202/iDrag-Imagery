@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import images from './helper/images'
+import NetworkDetector from './Hoc/NetworkDetector';
 
 class App extends Component {
+  renderImage() {
+    return (
+      <div className='image-list'>
+        {images.map(data => <img src={data.image} alt='random' key={data.id} className="image" />)}
+      </div>
+    )
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <p className="page-title">The Draconian Imagery</p>
+        {this.renderImage()}
       </div>
     );
   }
 }
 
-export default App;
+export default NetworkDetector(App);
