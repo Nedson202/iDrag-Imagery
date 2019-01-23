@@ -1,14 +1,28 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App p {
+.app p {
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.App .page-title {
+.app .page-title {
   font-size: 30px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+#error-symbol {
+    font-size: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    margin: auto;
 }
 
 .internet-error {

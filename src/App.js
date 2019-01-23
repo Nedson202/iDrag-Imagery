@@ -1,21 +1,31 @@
-import React, { Component } from 'react';
-import './App.css';
-import images from './helper/images'
-import NetworkDetector from './Hoc/NetworkDetector';
+import React, { Component } from "react";
+import "./App.css";
+import images from "./helper/images";
+import NetworkDetector from "./Hoc/NetworkDetector";
+import ImageCard from "./ImageCard";
 
 class App extends Component {
-  renderImage() {
+  state = {
+    loadedErrorMessage: "",
+    imageUrl: "",
+    imageLoaded: false
+  };
+
+  renderImages() {
     return (
-      <div className='image-list'>
-        {images.map(data => <img src={data.image} alt='random' key={data.id} className="image" />)}
+      <div className="image-list">
+        {images.map(data => (
+          <ImageCard key={data.id} imageData={data} />
+        ))}
       </div>
-    )
+    );
   }
+
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <p className="page-title">The iDrag Imagery</p>
-        {this.renderImage()}
+        {this.renderImages()}
       </div>
     );
   }
