@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/iDrag-imagery/precache-manifest.a3bc192bd1072d9d6e1d5b9bb21bf2ab.js"
+  "/iDrag-Imagery/precache-manifest.676e2edac5de3913b7f5286da84f5db9.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/iDrag-imagery/index.html", {
+workbox.routing.registerNavigationRoute("/iDrag-Imagery/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
